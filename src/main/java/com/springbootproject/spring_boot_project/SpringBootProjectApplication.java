@@ -8,7 +8,8 @@ public class SpringBootProjectApplication {
 
 	public static void main(String[] args) {
 		//SpringApplication.run(SpringBootProjectApplication.class, args);
-		var orderService=new OrderService(new GooglePaymentService());
+		var orderService=new OrderService();
+		orderService.setPaymentService(new PaytmPaymentService());
 		orderService.placeOrder();
 	}
 
