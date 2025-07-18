@@ -1,5 +1,8 @@
 package com.springbootproject.spring_boot_project;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class OrderService {
     private PaymentService paymentService;
 
